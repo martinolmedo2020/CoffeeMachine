@@ -48,7 +48,7 @@ coins = {
 
 
 def coffee_machine():
-    status_machine = True
+    on_machine = True
     money_in_machine = 0
 
     def check_resources(initial_resources, needed_resources):
@@ -91,10 +91,10 @@ def coffee_machine():
             print(f"{resource.title()}: {resources[resource]}")
         print(f"Money: ${money_in_machine:.2f}")
 
-    while status_machine:
+    while on_machine:
         user_election = input("What would you like? (espresso/latte/cappuccino): ")
         if user_election == "off":
-            status_machine = False
+            on_machine = False
         elif user_election == "report":
             report()
         else:
