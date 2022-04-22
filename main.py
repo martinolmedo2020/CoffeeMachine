@@ -89,7 +89,10 @@ def coffee_machine():
 
     def report():
         for resource in resources:
-            print(f"{resource.title()}: {resources[resource]}")
+            if resource == 'water' or resource == 'milk':
+                print(f"{resource.title()}: {resources[resource]}ml")
+            elif resource == 'coffee':
+                print(f"{resource.title()}: {resources[resource]}g")
         print(f"Money: ${money_in_machine:.2f}")
 
     while on_machine:
