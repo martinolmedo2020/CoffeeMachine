@@ -68,6 +68,7 @@ def coffee_machine():
     def process_coins(list_coins):
         """Asks the user how many coins from a list of coins they want to put in and returns the total amount"""
         user_payment = 0
+        print("Please insert coins.")
         for coin in list_coins:
             insert_coin = int(input(f"How many {coin}?: "))
             user_payment += list_coins[coin] * insert_coin
@@ -80,10 +81,10 @@ def coffee_machine():
         elif payment > cost:
             change = payment - cost
             print(f"Here's your change: ${change:.2f}")
-            print(f"Here's your {user_election}! Enjoy it")
+            print(f"Here's your {user_election} ☕ Enjoy!")
             return True
         else:
-            print(f"Here's your {user_election}! Enjoy it")
+            print(f"Here's your {user_election} ☕ Enjoy!")
             return True
 
     def report():
